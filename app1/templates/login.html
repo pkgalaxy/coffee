@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor | Login</title>
+    <style>
+      /* .hero-bg.jpg { filter: grayscale(100%);  } */
+
+      body {
+        background-repeat: no-repeat;
+        filter: grayscale(12%);
+
+      }
+
+
+      .link {
+        margin-left: 60px;
+      }
+
+      .outer {
+        background-color: azure;
+        height: 200px;
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+
+      .ext {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+
+      }
+ 
+      .btn {
+        margin-left: 130px;
+      }
+    </style>
+
+
+  </head>
+
+  <body>
+    <!-- text, search, url, tel, email, password, date pickers, number, checkbox, radio, and file. -->
+    <!-- name-value pair has to be send  -->
+    <!-- id is unique for ever tag -->
+    <!-- the for atribute in label tag must match with id attribute in input -->
+
+
+    <div class="ext">
+
+      <div class="outer">
+        <form action="" method="POST">
+          {% csrf_token %}
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" placeholder="username" size="30" required
+            autocomplete="off"><br><br>
+
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="password" size="30" required><br><br>
+
+          <input class=btn type="submit" value="Log in" size="40"><br><br>
+
+          <a class=link href="/signup/">New User Signup Here</a>
+
+        </form>
+      </div>
+    </div>
+
+
+
+  </body>
+
+</html>
